@@ -13,14 +13,6 @@ export const Menu = () => {
         top: 0
       }
     `;
-    const dropUp = keyframes`
-      from {
-        top: 0
-      }
-      to {
-        top: -200px
-      }
-    `;
 
     const IconMobile = styled.div`
       display: flex;
@@ -46,6 +38,7 @@ export const Menu = () => {
       list-style: none;
       background-color: #9D0606;
       transition: .4s;
+
       &.active {
         animation: ${dropDown} .4s forwards;
       }
@@ -67,12 +60,32 @@ export const Menu = () => {
     `;
 
     const MenuItem = styled.a`
+      position: relative;
       display: inline-block;
       padding: 10px 20px;
       text-transform: uppercase;
       color: #fff;
       font-weight: bold;
       font-size: 1.4rem;
+      transition: .4s;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+        height: 1px;
+        background-color: #9D0606;
+        transition: .4s;
+        opacity: 0;
+      }
+
+      &:hover&::before {
+        opacity: 1
+      }
+
       @media (min-width: 991px) {
         color: #333;
       }
@@ -110,8 +123,9 @@ const Close = (props: CloseProps) => {
       width: 2rem;
       height: 2rem;
       cursor: pointer;
+
       &::before,
-      &::after{
+      &::after {
         content: '';
         position: absolute;
         top: 0;
@@ -120,13 +134,16 @@ const Close = (props: CloseProps) => {
         height: 100%;
         background-color: #fff;
       }
+
       &::before {
         transform: translateX(-50%) rotate(45deg);
-      }&::after {
+      }
+
+      &::after {
         transform: translateX(-50%) rotate(-45deg);
       }
     `
     return (
-        <Close onClick={()=> props.close(false)}/>
+        <Close onClick={() => props.close(false)}/>
     )
 }
