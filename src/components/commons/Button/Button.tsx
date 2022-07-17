@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 interface ButtonProps {
-    text: string
+    text: any
 }
 
 export const Button = (props: ButtonProps) => {
