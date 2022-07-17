@@ -15,12 +15,12 @@ export const Header = () => {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      width: 50%;
+      column-gap: 2rem;
     `
     const Header__right = styled.div`
       display: flex;
       align-items: center;
-      width: 50%;
+      width: 100%;
       justify-content: flex-end;
       margin-right: 2rem;
     `
