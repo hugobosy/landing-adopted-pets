@@ -6,6 +6,7 @@ import {Menu} from "../../Menu/Menu";
 export const Header = () => {
     const Header = styled.header`
       width: 100%;
+      padding: 10px;
     `
     const Header__content = styled.div`
       display: flex;
@@ -16,6 +17,17 @@ export const Header = () => {
       justify-content: space-around;
       align-items: center;
       column-gap: 2rem;
+
+      h4 {
+        color: #000;
+        font-size: 3rem;
+      }
+
+      p {
+        color: #999;
+        font-size: 1.7rem;
+        letter-spacing: .5px;
+      }
     `
     const Header__right = styled.div`
       display: flex;
@@ -24,6 +36,7 @@ export const Header = () => {
       justify-content: flex-end;
       margin-right: 2rem;
     `
+
     return (
         <Header>
             <Container>
