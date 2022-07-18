@@ -12,15 +12,31 @@ export const AboutUs = () => {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 10px 20px;
+      padding: 40px 20px;
+      column-gap: 2rem;
 
       img {
         width: 100%;
       }
 
       div:nth-child(2) {
+        width: 100%;
         align-self: flex-start;
-      }`
+      }
+
+      @media (min-width: 768px) {
+        flex-direction: row;
+        div:nth-child(2) {
+          align-self: center;
+          width: 70%;
+        }
+      }
+      @media (min-width: 1600px) {
+        div:nth-child(2) {
+          width: 50%;
+        }
+      }
+    `;
     return (
         <Container>
             <AboutUs>

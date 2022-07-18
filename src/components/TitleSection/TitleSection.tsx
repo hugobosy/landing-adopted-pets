@@ -12,6 +12,12 @@ export const TitleSection = (props: TitleProps) => {
       text-transform: capitalize;
       width: 80%;
       letter-spacing: .1rem;
+      @media(min-width: 768px) {
+        font-size: 3.5rem;
+      }
+      @media(min-width: 1600px) {
+        font-size: 5rem;
+      }
     `
     return (
         <TitleSection>

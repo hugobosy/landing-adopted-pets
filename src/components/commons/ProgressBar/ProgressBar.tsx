@@ -12,7 +12,10 @@ export const ProgressBar = (props: ProgressProps) => {
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 1rem;
       padding: 1rem 0;
-
+      p {
+        font-size: 1.4rem;
+        color: #777;
+      }
       p:nth-child(1) {
         place-self: flex-start;
       }
@@ -24,7 +27,7 @@ export const ProgressBar = (props: ProgressProps) => {
         position: relative;
         grid-column: 1/3;
         background-color: #9D0606;
-        height: 1rem;
+        height: 1.6rem;
         border-radius: 20px;
         &::before {
           content: '';
