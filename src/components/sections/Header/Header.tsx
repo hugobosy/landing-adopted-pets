@@ -45,10 +45,10 @@ export const Header = () => {
       justify-content: space-around;
       width: 100%;
       padding: 30px 0;
-      height: 30rem;
+      height: 40rem;
       background-image: url("https://template78901.motopreview.com/mt-demo/78900/78901/mt-content/uploads/2019/03/mt-1774-home-header-bg.jpg");
       background-size: cover;
-      background-position: 50% 50%;
+      background-position: 60% 0;
       color: #fff;
 
       div {
