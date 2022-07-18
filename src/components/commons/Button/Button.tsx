@@ -22,7 +22,11 @@ export const Button = (props: ButtonProps) => {
 
       &:hover {
         background-color: #000;
-      }`
+      }
+      @media(min-width: 1600px) {
+        padding: 20px 40px;
+      }
+    `
 
     return (
         <Button>{props.text}</Button>
