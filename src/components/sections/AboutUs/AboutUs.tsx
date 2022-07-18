@@ -1,5 +1,41 @@
 import React from "react";
+import {Container} from "../../styles";
+import styled from "styled-components";
+import {LabelTitleSection} from "../../LabelTitleSection/LabelTitleSection";
+import {TitleSection} from "../../TitleSection/TitleSection";
+import {DescSection} from "../../DescSection/DescSection";
 
 export const AboutUs = () => {
-    return <h1>About us</h1>
+    const AboutUs = styled.div`
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 20px;
+
+      img {
+        width: 100%;
+      }
+
+      div:nth-child(2) {
+        align-self: flex-start;
+      }`
+    return (
+        <Container>
+            <AboutUs>
+                <div>
+                    <img
+                        src="https://template78901.motopreview.com/mt-demo/78900/78901/mt-content/uploads/2019/03/mt-1774-home-about.jpg"
+                        alt="Kici"/>
+                </div>
+                <div>
+                    <LabelTitleSection text='about us'/>
+                    <TitleSection text="what makes us care about pets?"/>
+                    <DescSection
+                        text='If it wasn’t for our founder’s childhood spent on a ranch in northern Texas, surrounded by domestic animals and pets all the time till she went to college – there might have been no Anilove animal shelter now. So as soon as she graduated with her Veterinary degree 12 years ago, she already knew what she will be doing for a living.'
+                    />
+                </div>
+            </AboutUs>
+        </Container>
+    )
 }
